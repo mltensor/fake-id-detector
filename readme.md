@@ -23,3 +23,6 @@ python main.py --max_depth 5 --random_state 1
 ```
 * `--max_depth`: Sets the maximum depth of the decision tree (default is typically 3 or higher).
 * `--random_state`: Controls the randomness of the decision tree algorithm, potentially leading to different results for each run.
+
+### Hosted repository
+This repository can also be directly run at https://colab.research.google.com/drive/17sSFlZY5fcIDgmQWwRnTX8FWItnfo7Oq?usp=sharing
