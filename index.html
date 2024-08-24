@@ -6,9 +6,12 @@
 </head>
 <body onload="brython()">
     <h1>Run Python Code</h1>
+    <div id="output"></div>  <!-- A div to display the output -->
     <script type="text/python">
-        # Your Python code here
-        print("Hello from Brython!")
+        from browser import document
+
+        # Set the content of the div with id="output"
+        document["output"].text = "Hello from Brython!"
     </script>
 </body>
 </html>
