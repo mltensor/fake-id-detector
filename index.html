@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Run Python Code with Brython</title>
-  <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.js"></script>
+    <title>Run Python Code with Brython</title>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.js"></script>
 </head>
-<body>
-  <h1>Run Python Code</h1>
-  <script>
-    Brython.runscript('src/main.py');
-  </script>
+<body onload="brython()">
+    <h1>Run Python Code</h1>
+    <script type="text/python">
+        # Your Python code here
+        print("Hello from Brython!")
+    </script>
 </body>
 </html>
