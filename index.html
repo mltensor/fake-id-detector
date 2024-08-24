@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Run Python Code with Brython</title>
-    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.js"></script>
+    <title>Social Media Fake Account Detector</title>
 </head>
-<body onload="brython()">
-    <h1>Run Python Code</h1>
-    <div id="output"></div>  <script type="text/python">
-        Brython.runscript('src/main.py');
+<body>
+    <h1>Run Fake Account Detector</h1>
+    <button onclick="runFakeDetector()">Run Detector</button>
+    <pre id="output"></pre>
+
+    <script>
+        function runFakeDetector() {
+            fetch('/run', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    max_depth: 5,
+                    random_state: 1
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('output').innerText = JSON.stringify(data, null, 2);
+            });
+        }
     </script>
 </body>
 </html>
